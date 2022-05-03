@@ -1,0 +1,262 @@
+#inicio{
+    background: url('../../imgs/fundo-inicio.jpg') no-repeat; 
+    background-position: center;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+#inicio h1{
+    font-size: 4vw;
+    line-height: 2.7vw;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 1vw;
+}
+#inicio h1 em{
+    font-size: 5vw;
+    text-transform: lowercase;
+}
+#inicio h2{
+    text-align: center;
+    background-color: black;
+    color: white;
+    font-weight: normal;
+    font-family: 'MyriadPro-Regular';
+    text-transform: uppercase;
+    padding: 0.1vw;
+    letter-spacing: 0.4vw;
+    font-size: 1.4vw;
+}
+#inicio *{
+    z-index:1
+}
+#inicio .fundo{
+    margin: 0;
+    width: 117vw;
+    height: 59vh;
+    position: absolute;
+    bottom: 0;
+    z-index: 0;
+    border-radius: 100% 100% 0% 0;
+}
+#inicio button{
+    width: 100%;
+    height: 7%;
+    font-size: 1.8vw;
+    border-radius: 40px;
+    box-shadow: 1px 5px rgb(0 0 0 / 20%);
+}
+#inicio .wrapper svg{
+    width: 48%;
+}
+#produtos h1{
+    height: 12vw;
+    text-transform: uppercase;
+    margin: 0;
+    font-size: 14vw;
+    text-align: center;
+    color: rgba(255,255,255,0.02);
+    /* opacity: 1.2; */
+    text-shadow: 0px 25vh 2px rgb(255 255 255 / 10%), 0 50vh rgb(255 255 255 / 20%), 0 75vh rgb(255 255 255 / 30%);
+}
+#produtos h2{
+        text-transform: uppercase;
+        margin-top: 4vw;
+}
+#produtos .slide{
+    align-self: center;
+    justify-self: center;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+#produtos .slide .wrapper::after{
+    content: ' ';
+    background-image: linear-gradient(to right, #FCADFE, #5DC9F7);
+    width: 19vw;
+    border-radius: 66%;
+    position: absolute;
+    height: 18vw;
+    z-index: 0;
+    top: -5%;
+    box-shadow: 5px 5px 5px 5px rgb(0 0 0 / 12%);
+    z-index: 0;
+    border: 2px solid rgba(255,255,255,0.8);
+    outline: solid;
+    outline-width: 1.5px;
+    outline-offset: 26px;
+    outline-color: rgba(255,255,255,0.6);
+    
+}
+#produtos .slide .wrapper{
+    height: 35vh;
+}
+#produtos .slide .wrapper img{
+    z-index: 1;
+    width: 20%;
+}
+#produtos select{
+    float: right;
+    margin-right: 5vw;
+}
+#sobre{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+#produtos .slide .seta-esquerda {
+    position: absolute;
+    left: 20%;
+    width: 5%;
+    bottom: 45%;
+    cursor: pointer;
+}
+#produtos .slide .seta-direita {
+    position: absolute;
+    width: 5%;
+    right: 20%;
+    bottom: 45%;
+    cursor: pointer;
+}
+#produtos select {
+    margin: 0;
+    position: absolute;
+    bottom: -20%;
+    right: 10%;
+    width: 23%;
+    height: 7%;
+    border-radius: 20px;
+    background-color: white;
+    font-size: 1.6vw;
+    text-align: left;
+    font-family: 'MyriadPro-Black';
+    padding-top: 0.5%;
+    padding-left: 2%;
+    text-transform: uppercase;
+    background-repeat: no-repeat;
+    background-position-x: 98%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-position-y: 50%;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' height='48' width='48'><path d='m24 30.75-12-12 2.15-2.15L24 26.5l9.85-9.85L36 18.8Z'/></svg>");
+
+}
+
+#produtos option {
+    font-family: 'MyriadPro-Regular';
+    font-size: 1.3vw;
+    text-transform: capitalize;
+    background-color: rgba(0,0,0,0);
+    overflow: auto;
+}
+#produtos .slide button{
+    width: 18%;
+    font-size: 1.3vw;
+    border-radius: 40px;
+    box-shadow: 1px 5px rgb(0 0 0 / 20%);
+    padding: 0.6%;
+}
+#sobre .conteudo{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: start;
+    justify-items: center;
+    flex-wrap: wrap;
+    row-gap: 0;
+    flex-direction: column;
+}
+#sobre .icones{
+        column-gap: 16px;
+        display: flex;
+        align-self: center;
+}
+#sobre .icones div{
+    display: inline;
+    width: 30%;
+    text-align: center;
+    
+}
+#sobre .icones div svg{
+    width: 5vw;
+    margin: auto;
+    display: block;
+}
+#sobre p{
+    width: 61%;
+    line-height: 2.7vw;
+    text-align: justify;
+}
+#sobre h1{
+    font-size: 3vw;
+    text-transform: uppercase;
+    margin-bottom: 0.4em;
+}
+#sobre hr{
+    width: 14%;
+    margin: 0;
+    background-color: black;
+    height: 2px;
+}
+#contatos 
+{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) ;
+}
+#contatos .esquerda {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    justify-items: start;
+    align-items: start;
+    align-content: start;
+    padding: 7vw 0 0 9vw;
+}
+#contatos h1{
+    text-transform: uppercase;
+    font-size: 3vw;
+    width: 55%;
+    margin:0;
+}
+#contatos p{
+    font-size: 2vw;
+    margin-bottom: 0;
+}
+#contatos input{
+    display: block;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid black;
+    margin: 1.5vw 0 1.5vw 0;
+    width: 20vw;
+    font-size: 1.2vw;
+}
+input::placeholder, textarea::placeholder {
+    color: black;
+}
+#contatos textarea{
+    background-color: transparent;
+    border-radius: 10px;
+    display: block;
+    height: 8vw;
+    width: 20vw;
+    margin: 1.5vw 0 1.5vw 0;
+    border: 1px solid black;
+    font-family: 'MyriadPro-Regular';
+    padding: 1vw;
+    font-size: 1.2vw;
+}
+#contatos button{
+    width: 70%;
+    font-size: 2.3vw;
+    border-radius: 40px;
+    box-shadow: 1px 5px rgb(0 0 0 / 20%);
+    padding: 0.6%;
+    color: white;
+    background-color: black;
+    text-transform: uppercase;
+    
+}

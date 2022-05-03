@@ -1,0 +1,97 @@
+html, body {/*tirar a margem padrão do browser*/
+    margin:0;
+    padding:0;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+.gradient{
+    background-image: linear-gradient(to right, #FCADFE, #5DC9F7);
+}
+section{
+    height: 100vh;
+    width: 100vw;
+}
+.wrapper{
+    display: flex;
+    justify-content: center;    
+}
+.negrito{
+    font-weight: bold;
+}
+.menuBranco{
+    background-color: white;
+    color: black !important;
+
+}
+.menuBranco li a{
+    color: black !important;
+}
+nav{
+    position: fixed;
+    height: 100vh;
+    width: 2vw;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5vw;
+    justify-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+nav a {
+    width: 1vw;
+    height: 1vw;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+nav a.selecionada{
+    background-color: white;
+}
+menu #sessoes{
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+    width: 100vw;
+    display: flex;
+    height: 10vh;
+    justify-content: center;
+    align-items: center;
+    column-gap: 2vw;
+    color: white;
+    font-size: 1.2vw;
+    letter-spacing: 0.4vw;
+    text-transform: uppercase;
+    z-index: 20;
+    padding: 0;
+    
+}
+menu #sessoes a{
+    font-family: MyriadPro-Regular, sans-serif;
+    color: white;
+   text-decoration: none;
+}
+menu #sessoes li{
+    list-style: none;
+    
+}
+menu #canto-esquerdo{
+    position: fixed;
+    z-index: 21;
+    top: 0;
+    left: 2vw;
+    width: 7%;
+    display: grid;
+}
+menu #canto-esquerdo #redes{
+    width: 30%;
+    justify-self: center;
+}
+menu #canto-esquerdo ul {
+    padding: 0;
+}
+menu #canto-esquerdo li {
+    list-style: none;
+    margin-top: 1vw;
+}
