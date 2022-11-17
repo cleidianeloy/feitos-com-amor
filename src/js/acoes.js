@@ -74,7 +74,6 @@ function slide(){
 }
 
 // var links = $.makeArray($('#sessoes li'));
-
 function ondeEstou(){
     var sections = $('section');
     var realSections = $.makeArray(sections);
@@ -94,6 +93,14 @@ function ondeEstou(){
     } 
     
     return estouAqui;
+}
+function proximaPagina(){
+    proxima = ondeEstou().next();
+    return proxima;
+}
+function anteriorPagina(){
+    proxima = ondeEstou().prev();
+    return proxima;
 }
 function trocaMenu(){
     if(ondeEstou().attr('id') !== 'inicio'){
@@ -161,10 +168,26 @@ function controlaNav(){
    }
 
 }
-$(window).scroll(function(){    
+var lastScrollTop = 0;
+$(window).scroll(function(){   
     trocaMenu();
     controlaNav();
 }) 
+$(window).on('wheel', function(event){
+   if (event.originalEvent.wheelDelta >= 0){
+        window.location.href= anteriorPagina().attr('id') === undefined ? window.location.href : '#' + anteriorPagina().attr('id');
+
+   } else {
+        window.location.href= proximaPagina().attr('id') === undefined ? window.location.href : '#' + proximaPagina().attr('id');
+    }  
+})
+$(document).keydown(function( event ) {
+    if ( event.which == 40 ) { // arrow down
+        window.location.href= proximaPagina().attr('id') === undefined ? window.location.href : '#' + proximaPagina().attr('id');
+    }else if(event.which == 38){ // arrow top
+        window.location.href= anteriorPagina().attr('id') === undefined ? window.location.href : '#' + anteriorPagina().attr('id');
+    }
+});
 $(document).ready(()=>{
     slide();
     trocaMenu();
