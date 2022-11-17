@@ -15,6 +15,9 @@ section{
     display: flex;
     justify-content: center;    
 }
+.wrapper img {
+    width: 100%;
+}
 .negrito{
     font-weight: bold;
 }

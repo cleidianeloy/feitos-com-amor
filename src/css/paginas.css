@@ -51,6 +51,9 @@
 #inicio .wrapper svg{
     width: 48%;
 }
+#inicio .conteudo-esquerda{
+    width: 60%;
+}
 #produtos h1{
     height: 12vw;
     text-transform: uppercase;
@@ -91,12 +94,15 @@
     outline-color: rgba(255,255,255,0.6);
     
 }
-#produtos .slide .wrapper{
-    height: 35vh;
+#produtos .slide .wrapper {
+    height: 40vh;
+    width: auto;
+    margin: auto;
 }
-#produtos .slide .wrapper img{
+#produtos .slide .wrapper img {
     z-index: 1;
-    width: 20%;
+    height: 100%;
+    width: auto;
 }
 #produtos select{
     float: right;
@@ -169,34 +175,43 @@
     row-gap: 0;
     flex-direction: column;
 }
-#sobre .icones{
-        column-gap: 16px;
-        display: flex;
-        align-self: center;
+#sobre .icones {
+    column-gap: 2vw;
+    display: flex;
+    align-self: center;
 }
-#sobre .icones div{
+#sobre .icones div {
     display: inline;
-    width: 30%;
     text-align: center;
-    
+    margin: auto;
+    font-size: 1.2vw;
+    width: 8vw;
+    font-family: MyriadPro-Regular, sans-serif;
 }
 #sobre .icones div svg{
     width: 5vw;
     margin: auto;
     display: block;
 }
-#sobre p{
-    width: 61%;
+#sobre p {
+    width: 60%;
     line-height: 2.7vw;
     text-align: justify;
+    margin: 0 auto;
+    font-size: 1.3vw;
 }
-#sobre h1{
+#sobre h1 {
     font-size: 3vw;
     text-transform: uppercase;
-    margin-bottom: 0.4em;
+    margin: 0 auto;
+    width: 60%;
 }
-#sobre hr{
-    width: 14%;
+#sobre .aux {
+    width: 60%;
+    margin: 0.4em auto;
+}
+#sobre hr {
+    width: 20%;
     margin: 0;
     background-color: black;
     height: 2px;
