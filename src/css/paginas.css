@@ -279,3 +279,43 @@ input::placeholder, textarea::placeholder {
     text-transform: uppercase;
     
 }
+@media (max-height: calc(100vw * 0.5)) {
+    section {
+        width: 100vw;
+        min-height: 100vh;
+    }
+
+    .wrapper img {
+        width: 75%;
+    }
+    #produtos h1 {
+        height: 10vw;
+        font-size: 11vw;
+    }
+    #produtos select {
+        bottom: -22%;
+    }
+     #produtos .slide .wrapper {
+        height: 10vw;
+    }
+    #produtos .slide .wrapper::after {
+        width: 12vw;
+        height: 11vw;
+    }
+    #sobre h1 {
+        font-size: 2vw;
+    }
+    #sobre p {
+        font-size: 1.2vw;
+    }
+    #contatos h1 {
+        font-size: 2vw;
+    }
+    #contatos p {
+        font-size: 1.5vw;
+    }
+    #produtos h1 {
+        height: 13vw;
+        font-size: 11vw;
+    }
+}
