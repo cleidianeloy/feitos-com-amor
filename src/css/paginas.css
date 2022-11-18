@@ -35,7 +35,7 @@
 #inicio .fundo {
     background-image: url(../../imgs/fundo-home.svg);
     background-size: cover;
-    background-position: center;
+    background-position: center 30px;
     background-repeat: no-repeat;
     margin: 0;
     width: 100vw;
