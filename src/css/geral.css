@@ -3,6 +3,8 @@ html, body {/*tirar a margem padrão do browser*/
     padding:0;
     overflow: hidden;
     scroll-behavior: smooth;
+    max-width: 100vw;
+    
 }
 .gradient{
     background-image: linear-gradient(to right, #FCADFE, #5DC9F7);
