@@ -282,6 +282,7 @@ input::placeholder, textarea::placeholder {
     section {
         width: 100vw;
         min-height: 100vh;
+        height: auto;
     }
 
     .wrapper img {
@@ -291,9 +292,6 @@ input::placeholder, textarea::placeholder {
         height: 10vw;
         font-size: 11vw;
     }
-    /* #produtos select {
-        bottom: -22%;
-    } */
      #produtos .slide .wrapper {
         height: 10vw;
     }

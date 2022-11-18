@@ -12,6 +12,7 @@ html, body {/*tirar a margem padrão do browser*/
 section{
     height: 100vh;
     width: 100vw;
+    container-type: inline-size;
 }
 .wrapper{
     display: flex;
