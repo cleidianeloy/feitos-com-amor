@@ -101,3 +101,23 @@ menu #canto-esquerdo li {
     list-style: none;
     margin-top: 1vw;
 }
+@media (orientation: portrait){
+    nav {
+        display: none;
+    }
+    menu #sessoes {
+        height: 8vh;
+        font-size: 0.8rem;
+    }
+    menu #canto-esquerdo {
+        top: 0vh;
+        left: 1vw;
+        width: 13%;
+    }
+    menu #canto-esquerdo #redes {
+        width: 40%;
+    }
+    menu #canto-esquerdo li {
+        margin-top: 3vw;
+    }
+}

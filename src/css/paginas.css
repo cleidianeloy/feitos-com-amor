@@ -316,3 +316,112 @@ input::placeholder, textarea::placeholder {
         font-size: 11vw;
     }
 }
+@media (orientation: portrait){
+    #inicio{
+        display: flex;
+    }
+    #inicio .conteudo-esquerda {
+        width: 80%;
+        margin: auto;
+    }
+    #inicio .conteudo-direita{
+        display: none;
+    }
+
+    #inicio .wrapper svg {
+        width: 75%;
+    }
+    #inicio h1 {
+        font-size: 3rem;
+        line-height: 1.5rem;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    #inicio h1 em {
+        font-size: 2rem;
+    }
+    #inicio h2 {
+        font-size: 1.3rem;
+    }
+
+    #inicio button {
+        width: 100%;
+        height: 7%;
+        font-size: 1.4rem;
+        border-radius: 40px;
+        box-shadow: 1px 5px rgb(0 0 0 / 20%);
+    }
+    #sobre{
+        display: flex;
+    }
+    #sobre .conteudo {
+        display: flex;
+    }
+    #sobre h1 {
+        font-size: 2rem;
+        width: 70%;
+    }
+    #sobre .aux {
+        width: 70%;
+        margin: 0.4em auto;
+    }
+    #sobre p {
+        width: 70%;
+        line-height: 1.2rem;
+        font-size: 1rem;
+    }
+    #sobre hr {
+        border: none;
+    }   
+    #sobre .icones {
+        margin: 6vw;
+    }
+    #sobre .icones div svg {
+        width: 16vw;
+    }
+    #sobre .icones div {
+        font-size: 1rem;
+        width: 25vw;
+    }
+    #sobre .gradient{
+        display: none;
+    }
+    #contatos {
+        display: flex;
+    }
+    #contatos .esquerda {
+        justify-content: center;
+        justify-items: baseline;
+        align-content: center;
+        width: 70%;
+        margin: auto;
+    }
+    #contatos h1 {
+        font-size: 2rem;
+        width: 100%;
+        margin:  0;
+    }
+    #contatos p {
+        font-size: 1.5rem;
+        margin-bottom: 0;
+        margin: 0;
+    }
+    #contatos input {
+        margin: 3.5vw 0 3.5vw 0;
+        width: 70vw;
+        font-size: 1rem;
+    }
+    #contatos textarea {
+        height: 10vw;
+        width: 100%;
+        margin: 1.5vw 0 1.5vw 0;
+        padding: 1vw;
+        font-size: 1rem;
+    }
+    #contatos button {
+        width: 100%;
+        font-size: 1rem;
+        padding: 3%;
+        margin: 2vh 0;
+    }
+}
