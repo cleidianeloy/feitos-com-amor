@@ -72,18 +72,28 @@ function slide(){
 
     })
 }
-
-// var links = $.makeArray($('#sessoes li'));
 function ondeEstou(){
     var sections = $('section');
     var realSections = $.makeArray(sections);
     var sectionsPositions = $.map(realSections, function (section){
         return $(section).position().top;
     });
+    var sectionsAreas = $.map(realSections, function (section){
+        return $(section).position().top + $(section).height() ;
+    });
+    console.log(sectionsAreas);
     var userPosition = $(this).scrollTop(); 
+    console.log(userPosition);
     for(var i = 0; i < sectionsPositions.length; i++){
         if(userPosition === sectionsPositions[i]){
            sections.each(function(index){
+                if(index === i){
+                    estouAqui = $(this);
+
+                }
+           })
+        }else if(userPosition > sectionsPositions[i] && userPosition < sectionsAreas[i] ){
+            sections.each(function(index){
                 if(index === i){
                     estouAqui = $(this);
 
@@ -168,29 +178,61 @@ function controlaNav(){
    }
 
 }
-var lastScrollTop = 0;
+
+
+function vaiParaProxima(proxima){
+    window.location.href = proxima.attr('id') === undefined ? window.location.href : '#' + proxima.attr('id');
+
+}
+function vaiParaAnterior(anterior){
+    window.location.href = anterior.attr('id') === undefined ? window.location.href : '#' + anterior.attr('id');
+
+}
+function scrollPeloTeclado(){
+    $(document).keydown(function( event ) {
+        if ( event.which == 40 ) { // arrow down
+            vaiParaProxima(proximaPagina())
+        }else if(event.which == 38){ // arrow top
+            vaiParaAnterior(anteriorPagina())
+        }
+    });
+}
+function movimentaPeloMouse(){
+    $(window).on('wheel', function(event){
+        if (event.originalEvent.wheelDelta >= 0){
+         vaiParaAnterior(anteriorPagina());
+     
+        } else {
+         vaiParaProxima(proximaPagina());
+         }  
+     })
+}
+function acionaScroll(){
+    $('html').css('overflow-y', 'auto');
+}
+var isMobile = false;
+function mobileFunctions(){
+    acionaScroll()
+}
+function desktopFunctions(){
+    scrollPeloTeclado();
+    movimentaPeloMouse();
+}
 $(window).scroll(function(){   
     trocaMenu();
     controlaNav();
+   
 }) 
-$(window).on('wheel', function(event){
-   if (event.originalEvent.wheelDelta >= 0){
-        window.location.href= anteriorPagina().attr('id') === undefined ? window.location.href : '#' + anteriorPagina().attr('id');
 
-   } else {
-        window.location.href= proximaPagina().attr('id') === undefined ? window.location.href : '#' + proximaPagina().attr('id');
-    }  
-})
-$(document).keydown(function( event ) {
-    if ( event.which == 40 ) { // arrow down
-        window.location.href= proximaPagina().attr('id') === undefined ? window.location.href : '#' + proximaPagina().attr('id');
-    }else if(event.which == 38){ // arrow top
-        window.location.href= anteriorPagina().attr('id') === undefined ? window.location.href : '#' + anteriorPagina().attr('id');
-    }
-});
 $(document).ready(()=>{
     slide();
     trocaMenu();
     controlaNav()
     retornaLink()
+
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        isMobile = true;
+    }
+    isMobile ? mobileFunctions() : desktopFunctions();
+    
 })

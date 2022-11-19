@@ -278,7 +278,7 @@ input::placeholder, textarea::placeholder {
     text-transform: uppercase;
     
 }
-@media (max-height: calc(100vw * 0.5)) {
+@media (max-height: calc(100vw * 0.46)) {
     section {
         width: 100vw;
         min-height: 100vh;
