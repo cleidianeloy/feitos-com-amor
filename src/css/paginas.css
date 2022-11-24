@@ -251,6 +251,25 @@
     margin: 1.5vw 0 1.5vw 0;
     width: 20vw;
     font-size: 1.2vw;
+    padding-inline-start: 1.5em;
+}
+#contatos input[type="text"]{
+    background-image: url(../../imgs/person.svg);
+    background-repeat: no-repeat;
+    background-position: 0.2rem;
+    background-size: 1em;
+}
+#contatos input[type="tel"]{
+    background-image: url(../../imgs/phone.svg);
+    background-repeat: no-repeat;
+    background-position: 0.2rem;
+    background-size: 1em;
+}
+#contatos input[type="email"]{
+    background-image: url(../../imgs/mail.svg);
+    background-repeat: no-repeat;
+    background-position: 0.2rem;
+    background-size: 1em;
 }
 input::placeholder, textarea::placeholder {
     color: black;
