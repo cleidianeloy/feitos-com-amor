@@ -27,7 +27,7 @@ var cupcakes = [
         imagem: 'cupcake.png', 
         nome: 'Cupcake',
         descricao: 'Unidade de Cupcake com uma diversidade de sabores para escolher',
-        alt: 'Cupcake'
+        alt: 'Cupcake com cobertura rosa'
     }
 ]
 var produtos = [brigadeiros, macarons, cupcakes];
