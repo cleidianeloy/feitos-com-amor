@@ -407,6 +407,11 @@ input::placeholder, textarea::placeholder {
     }
     #produtos .slide > div {
         min-width: 80vw;
+        min-height: 80vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: flex-end;
     }
     #produtos .slide .wrapper {
         height: auto;
@@ -419,10 +424,10 @@ input::placeholder, textarea::placeholder {
     #produtos .slide .wrapper::after {
         width: 40vw;
         height: 40vw;
-        top: -2%;
+        top: auto;
     }
     #produtos h2 {
-        margin-top: 12vw;
+        margin: 0;
     }
     #produtos p{
         font-size: 1.5rem;
