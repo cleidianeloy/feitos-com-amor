@@ -1,33 +1,17 @@
-function slide(){
 
-    var slideBrigadeiros = $('<div/>').addClass('Brigadeiros');
-    var slideMacarons = $('<div/>').addClass('Macarons');
-    var slideCupcakes = $('<div/>').addClass('Cupcakes');
-    slideBrigadeiros.addClass('slide');
-    slideMacarons.addClass('slide');
-    slideCupcakes.addClass('slide');
-
-    slideBrigadeiros.append(selectProdutos(brigadeiros));
-    slideMacarons.append(selectProdutos(macarons));
-    slideCupcakes.append(selectProdutos(cupcakes));
-    $('#produtos').append(slideBrigadeiros);
-    $('#produtos').append(slideMacarons);
-    $('#produtos').append(slideCupcakes);
-    slideBrigadeiros.show();
-    slideMacarons.hide();
-    slideCupcakes.hide();
-    selectProdutos(macarons);
-    selectProdutos(cupcakes);
+function slide(tema,conteudo,div){
+    var slideTema = $('<div/>').addClass(tema);
+    slideTema.addClass('slide');
+    slideTema.append(selectProdutos(conteudo));
+    $('#' + div).append(slideTema);
+    $('.slide').hide();
+    $('.slide').first().show();
     $('.slide').append(' <svg class="seta-esquerda" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="#000000"><path d="M0 0h24v24H0z" fill="none"/><path d="M11.67 3.87L9.9 2.1 0 12l9.9 9.9 1.77-1.77L3.54 12z"/></svg>');
     $('.slide').append('<svg class="seta-direita" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" viewBox="0 0 24 24"  fill="#000000"><g>            <path d="M0,0h24v24H0V0z" fill="none"/>   </g><g><polygon points="6.23,20.23 8,22 18,12 8,2 6.23,3.77 14.46,12"/>    </g></svg>');
-
-    slideBrigadeiros.children('div').hide();
-    slideBrigadeiros.children('div').first().show();
-    slideMacarons.children('div').hide();
-    slideMacarons.children('div').first().show();
-    slideCupcakes.children('div').hide();
-    slideCupcakes.children('div').first().show();
-
+    if(!isMobile){
+        slideTema.children('div').hide();
+        slideTema.children('div').first().show();
+    }
     $('.seta-esquerda').click((event)=>{
         var essaSeta = $(event.currentTarget);
         var paiDaSeta = essaSeta.parent();
@@ -225,14 +209,17 @@ $(window).scroll(function(){
 }) 
 
 $(document).ready(()=>{
-    slide();
-    trocaMenu();
-    controlaNav()
-    retornaLink()
+
 
     if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
         isMobile = true;
     }
     isMobile ? mobileFunctions() : desktopFunctions();
+    trocaMenu();
+    controlaNav();
+    retornaLink();
+    produtos.forEach((value, index,array)=>{
+        slide(value[0].nome, value,'produtos')
+    })
     
 })

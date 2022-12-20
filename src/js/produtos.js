@@ -4,6 +4,11 @@ var brigadeiros = [
         imagem: 'brigadeiros.png',
         nome: 'Brigadeiros Gourmet',
         descricao: 'Caixa com 20 brigadeiros com sabores de sua escolha'
+    },
+    {
+        imagem: 'brigadeiros.png',
+        nome: 'Brigadeiros Gourmet',
+        descricao: 'Caixa com 10 brigadeiros com sabores de sua escolha'
     }
 
 ]
@@ -21,6 +26,7 @@ var cupcakes = [
         descricao: 'Unidade de Cupcake com uma diversidade de sabores para escoolher'
     }
 ]
+var produtos = [brigadeiros, macarons, cupcakes];
 function selectProdutos(produto){
     var divs = [];
     for(var i = 0; i < produto.length; i++){
@@ -58,13 +64,13 @@ $('#selectProdutos').change(function(){
             break;
         case 'Macarons':
             $('#produtos').children('h1').text('Macarons');
-            $('.Macarons').show();
-            $('.Macarons').siblings('.slide').hide();
+            $('.Macaron').show();
+            $('.Macaron').siblings('.slide').hide();
             break;
         case 'Cupcakes':
             $('#produtos').children('h1').text('Cupcakes');
-            $('.Cupcakes').show();
-            $('.Cupcakes').siblings('.slide').hide();
+            $('.Cupcake').show();
+            $('.Cupcake').siblings('.slide').hide();
             break;
     }
     

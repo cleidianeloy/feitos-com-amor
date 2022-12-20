@@ -400,6 +400,14 @@ input::placeholder, textarea::placeholder {
         text-align: center;
         right: 0;
     }
+    #produtos .slide {
+        display: flex;
+        flex-direction: row;
+        overflow-x: auto;
+    }
+    #produtos .slide > div {
+        min-width: 80vw;
+    }
     #produtos .slide .wrapper {
         height: auto;
         width: 60vw;
@@ -423,7 +431,7 @@ input::placeholder, textarea::placeholder {
     }
     #produtos .slide button {
         width: 80%;
-        font-size: 1.7rem;
+        font-size: 1.5rem;
     }
     #produtos .slide .seta-esquerda {
         display: none;
