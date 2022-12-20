@@ -3,12 +3,14 @@ var brigadeiros = [
     {
         imagem: 'brigadeiros.png',
         nome: 'Brigadeiros Gourmet',
-        descricao: 'Caixa com 20 brigadeiros com sabores de sua escolha'
+        descricao: 'Caixa com 20 brigadeiros com sabores de sua escolha',
+        alt:'caixa com diversos doces de sabores variados'
     },
     {
         imagem: 'brigadeiros.png',
         nome: 'Brigadeiros Gourmet',
-        descricao: 'Caixa com 10 brigadeiros com sabores de sua escolha'
+        descricao: 'Caixa com 10 brigadeiros com sabores de sua escolha',
+        alt:'caixa com diversos doces de sabores variados'
     }
 
 ]
@@ -16,14 +18,16 @@ var macarons = [
     {
         imagem: 'macaron.png',
         nome: 'Macaron',
-        descricao: 'Caixa com 20 macarons com sabores a sua escolha'
+        descricao: 'Caixa com 20 macarons com sabores a sua escolha', 
+        alt: '3 doces coloridos empilhados um em cima do outro'
     }
 ]
 var cupcakes = [
     {
         imagem: 'cupcake.png', 
         nome: 'Cupcake',
-        descricao: 'Unidade de Cupcake com uma diversidade de sabores para escoolher'
+        descricao: 'Unidade de Cupcake com uma diversidade de sabores para escolher',
+        alt: 'Cupcake'
     }
 ]
 var produtos = [brigadeiros, macarons, cupcakes];
@@ -45,6 +49,7 @@ function selectProdutos(produto){
         p.text(descricao);
         h2.text(titulo);
         img.attr('src','imgs/'+ srcImagem);
+        img.attr('alt', produto[i].alt);
         divWrapper.append(img);
         div.append(divWrapper);
         div.append(h2);
